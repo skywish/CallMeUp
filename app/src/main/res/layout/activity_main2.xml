@@ -1,0 +1,144 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_color" />
+
+    <FrameLayout
+        android:id="@+id/layout_fragment"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent">
+
+    </FrameLayout>
+
+    <View
+        android:background="@color/bottom_divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="57dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/layout_alarm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_alarm"
+                        android:background="@drawable/ic_alarm_normal"
+                        android:layout_width="@dimen/main_tab_icon_size"
+                        android:layout_height="@dimen/main_tab_icon_size" />
+
+                    <TextView
+                        android:id="@+id/tv_alarm"
+                        android:text="@string/bottom1"
+                        android:gravity="center"
+                        android:textSize="@dimen/main_tab_font_size"
+                        android:textColor="@color/bottom_font_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/layout_find"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_find"
+                        android:background="@drawable/ic_find_normal"
+                        android:layout_width="@dimen/main_tab_icon_size"
+                        android:layout_height="@dimen/main_tab_icon_size" />
+
+                    <TextView
+                        android:id="@+id/tv_find"
+                        android:text="@string/bottom2"
+                        android:gravity="center"
+                        android:textSize="@dimen/main_tab_font_size"
+                        android:textColor="@color/bottom_font_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/layout_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_message"
+                        android:background="@drawable/ic_message_normal"
+                        android:layout_width="@dimen/main_tab_icon_size"
+                        android:layout_height="@dimen/main_tab_icon_size" />
+
+                    <TextView
+                        android:id="@+id/tv_message"
+                        android:text="@string/bottom3"
+                        android:gravity="center"
+                        android:textSize="@dimen/main_tab_font_size"
+                        android:textColor="@color/bottom_font_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

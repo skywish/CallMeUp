@@ -1,0 +1,174 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_color" />
+
+    <TimePicker
+        android:background="#607d8b"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:id="@+id/timePicker" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6">
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:id="@+id/layout_who"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:text="谁叫我起床"
+                android:textSize="@dimen/edit_info_font"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/sexRadioGroup"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="女"
+                    android:id="@+id/isGirl"
+                    android:checked="true"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/isBoy"
+                    android:text="男" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/isSystem"
+                    android:text="本地"/>
+            </RadioGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_ring"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:text="闹铃设置"
+                android:textSize="@dimen/edit_info_font"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/chooseRingBtn"
+                android:visibility="visible"
+                android:background="@drawable/shape_circlebutton"
+                android:textColor="@color/white"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:text="铃声选择"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/greyline_thin"
+            android:background="@color/lightgrey"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_repeat"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:text="是否重复"
+                android:textSize="@dimen/edit_info_font"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/repeatBtn"
+                android:visibility="visible"
+                android:background="@drawable/shape_circlebutton"
+                android:textColor="@color/white"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:text="重复设置"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/greyline_thin"
+            android:background="@color/lightgrey"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_save"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:background="@drawable/shape_circlebutton"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="提交"
+                    android:textColor="@color/white"
+                    android:id="@+id/submitBtn" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:background="@drawable/shape_circlebutton_grey"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="删除闹钟"
+                    android:id="@+id/deleteClockBtn"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/greyline_thin"
+            android:background="@color/lightgrey"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

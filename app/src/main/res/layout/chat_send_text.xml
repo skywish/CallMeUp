@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:visibility="gone"
+        android:textSize="@dimen/tv_time_textsize"
+        android:textColor="@color/chat_time_font"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/tv_time_height" />
+
+    <RelativeLayout
+        android:layout_below="@id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/head_imageView"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="3dp"
+            android:src="@drawable/user_head_photo" />
+
+        <RelativeLayout
+            android:id="@+id/repley_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/head_imageView">
+
+            <TextView
+                android:id="@+id/reply_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/right_normal"
+                android:gravity="center_vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="25dp"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+
+            <ProgressBar
+                android:id="@+id/msg_sending_progressBar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="invisible"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:id="@+id/msg_error_imageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="invisible"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/msg_error_pic" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_color" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="快去录制你的声音吧！"
+            android:gravity="center"
+            android:paddingBottom="60dp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/recent_subtitle"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <!--<Button-->
+            <!--android:layout_marginBottom="20dp"-->
+            <!--android:id="@+id/addRecordBtn"-->
+            <!--android:background="@drawable/ic_microphone"-->
+            <!--android:layout_height="60dp"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_centerHorizontal="true"/>-->
+
+        <com.example.skywish.imtest001.view.MasterLayout
+            android:layout_marginBottom="20dp"
+            android:id="@+id/addRecordBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+        </com.example.skywish.imtest001.view.MasterLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/secondShowView"
+            android:visibility="visible"
+            android:layout_above="@+id/addRecordBtn"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</LinearLayout>

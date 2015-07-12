@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.skywish.imtest001">
+
+    <!-- normal permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- Push SDK权限 -->
+    <permission
+        android:name="cn.bmob.permission.push"
+        android:protectionLevel="normal"></permission>
+    <uses-permission android:name="cn.bmob.permission.push" />
+    <!-- 连接网络权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- 振动 录音-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- 查找位置-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+
+
+
+    <application
+        android:name=".CustomApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.SplashActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.RegisterActivity" />
+        <activity android:name=".ui.LoginActivity" />
+        <activity android:name=".ui.MainActivity2">
+
+        </activity>
+
+        <!-- 聊天模块 -->
+        <activity android:name=".ui.MyFriendActivity" />
+        <activity android:name=".ui.AddFriendActivity" />
+        <activity android:name=".ui.SearchResultActivity" />
+        <activity android:name=".ui.UserInfoActivity" />
+        <activity android:name=".ui.ChatActivity" />
+        <activity android:name=".ui.EditInfoActivity" />
+        <activity android:name=".ui.ImageActivity" />
+
+        <!-- 修改资料模块-->
+        <activity android:name=".ui.ChangeNickActivity" />
+        <activity android:name=".ui.ChangeCityActivity" />
+        <activity android:name=".ui.ChangeDateActivity" />
+        <activity android:name=".ui.ChangeWordsActivity" />
+        <activity android:name=".ui.AccountActivity" />
+        <activity android:name=".ui.ForgetPsdActivity" />
+
+        <!-- 发现模块-->
+        <activity android:name=".ui.NearPeopleActivity" />
+
+        <!-- 闹钟模块-->
+        <activity android:name=".ui.ClockAlert" />
+        <activity android:name=".ui.ChooseRingActivity" />
+        <activity android:name=".ui.AddClockActivity" />
+        <activity android:name=".ui.CallUpActivity" />
+        <activity android:name=".ui.MyClockActivity" />
+        <activity android:name=".ui.MyRecordActivity" />
+        <activity android:name=".ui.RecordActivity" />
+        <activity android:name=".ui.ChooseRingActivity2" />
+
+        <!-- 自定义广播-->
+        <receiver android:name=".broadcast.ClockReceiver" />
+
+        <service
+            android:name="cn.bmob.push.lib.service.PushService"
+            android:exported="true"
+            android:label="PushService"
+            android:permission="cn.bmob.permission.push"
+            android:process="cn.bmob.push">
+            <intent-filter>
+                <action android:name="cn.bmob.push.lib.service.PushService" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="cn.bmob.push.PushReceiver">
+            <intent-filter android:priority="2147483647"> <!-- 优先级加最高 -->
+                <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <!-- 解锁完成后会调用 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <!-- 监听网络连通性 -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <!--聊天消息接收器 -->
+        <receiver android:name=".broadcast.MyMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.bmob.push.action.MESSAGE" />
+            </intent-filter>
+        </receiver>
+
+
+        <!-- baidu map -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="joY66vSRKgwCE0getvY85QVr" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2"></action>
+            </intent-filter>
+        </service>
+
+        <!-- QQ登陆-->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1104720566" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    </application>
+
+</manifest>

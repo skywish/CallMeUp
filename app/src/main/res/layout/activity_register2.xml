@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/back"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <View
+        android:layout_weight="0.35"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <ImageView
+        android:background="@drawable/ic_head"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <View
+        android:layout_weight="0.09"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <EditText
+                android:id="@+id/register_edit_account"
+                android:hint="用户名"
+                android:textColorHint="#cccccc"
+                android:gravity="center"
+                android:background="@drawable/shape_circle_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <EditText
+                android:id="@+id/register_edit_password"
+                android:hint="密码"
+                android:textColorHint="#cccccc"
+                android:inputType="textPassword"
+                android:gravity="center"
+                android:background="@drawable/shape_circle_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <EditText
+                android:id="@+id/register_edit_passwordAgain"
+                android:hint="确认密码"
+                android:textColorHint="#cccccc"
+                android:gravity="center"
+                android:inputType="textPassword"
+                android:background="@drawable/shape_circle_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/register_button_register"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_circlebutton"
+            android:text="注册"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="bottom|center_horizontal"
+        android:layout_weight="0.5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

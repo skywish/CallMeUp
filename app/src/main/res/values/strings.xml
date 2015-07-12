@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">CallMeUp</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="no_network">请连接网络</string>
+
+    <!-- userinfo-->
+    <string name="no_city">未知的地方</string>
+    <string name="no_words">这家伙很懒，什么都没留下</string>
+
+    <!-- 闹钟模块-->
+    <string name="title_activity_my_clock">MyClockActivity</string>
+    <string name="title_activity_add_clock">AddClockActivity</string>
+    <string name="title_activity_ring">Ring</string>
+    <string name="title_activity_call_up">CallUpActivity</string>
+    <string name="title_activity_record">RecordActivity</string>
+    <string name="title_activity_my_record">MyRecordActivity</string>
+
+    <!-- main-->
+    <string name="bottom1">闹钟</string>
+    <string name="bottom2">发现</string>
+    <string name="bottom3">信息</string>
+</resources>

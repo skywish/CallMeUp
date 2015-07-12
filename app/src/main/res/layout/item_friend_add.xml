@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <RelativeLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_default_profile_head"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/tv_friends_username"
+            android:text="测试代码"
+            android:textColor="@color/toolbar_color"
+            android:textSize="21dp"
+            android:paddingLeft="15dp"
+            android:paddingBottom="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_friends_time"
+            android:text="2015-05-06 13:45"
+            android:textSize="15sp"
+            android:paddingLeft="15dp"
+            android:layout_toRightOf="@id/iv_avatar"
+            android:layout_marginRight="50dp"
+            android:paddingTop="30dp"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_accept"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:background="@color/lightgreen"
+            android:visibility="visible"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="接受"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tv_accept_ready"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="已接受" />
+    </RelativeLayout>
+
+</RelativeLayout>

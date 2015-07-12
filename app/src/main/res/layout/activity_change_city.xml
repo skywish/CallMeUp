@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_color" />
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/layout_province"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:text="省份"
+                android:textSize="@dimen/edit_info_font"
+                android:layout_centerVertical="true"
+                android:textColor="@color/recent_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/province_spinner"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_city"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:text="城市"
+                android:textSize="@dimen/edit_info_font"
+                android:layout_centerVertical="true"
+                android:textColor="@color/recent_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/city_spinner"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_town"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:text="县区"
+                android:textSize="@dimen/edit_info_font"
+                android:layout_centerVertical="true"
+                android:textColor="@color/recent_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/county_spinner"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_location"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:text="地区"
+                android:textSize="@dimen/edit_info_font"
+                android:layout_centerVertical="true"
+                android:textColor="@color/recent_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="50dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/edit_info_font"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="保存"
+                android:textColor="@color/white"
+                android:background="@drawable/shape_circlebutton"
+                android:layout_width="50dp"
+                android:layout_height="30dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

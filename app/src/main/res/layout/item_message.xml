@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/head_imageView"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="3dp"
+        android:src="@drawable/dev_head_photo" />
+
+    <TextView
+        android:id="@+id/reply_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:layout_toRightOf="@id/head_imageView"
+        android:background="@drawable/dev_msg_box"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="18dp"
+        android:paddingTop="8dp"
+        android:textColor="#010101"
+        android:textSize="18sp" />
+
+    <ViewStub
+        android:id="@+id/time_view_stub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reply_textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout="@layout/chat_msg_time" />
+
+</RelativeLayout>

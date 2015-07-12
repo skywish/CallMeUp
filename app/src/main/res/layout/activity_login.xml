@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/login_image_background"
+        android:background="@drawable/login_background"/>
+
+    <LinearLayout
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/login_image_account"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/icon_email"/>
+        <EditText
+            android:id="@+id/login_edit_account"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:hint="用户名"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/login_image_password"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/icon_password"/>
+        <EditText
+            android:id="@+id/login_edit_password"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:inputType="textPassword"
+            android:hint="密码"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/login_button_login"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="登陆"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/login_text_forget"
+            android:paddingLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="忘记密码"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/login_text_register"
+            android:paddingRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="注册用户"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+</LinearLayout>

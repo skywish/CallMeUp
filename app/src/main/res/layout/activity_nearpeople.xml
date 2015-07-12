@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_color" />
+
+    <ListView
+        android:visibility="gone"
+        android:id="@+id/list_near_people"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/layout_info"
+        android:visibility="visible"
+        android:layout_marginRight="40dp"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginBottom="70dp"
+            android:id="@+id/iv_icon"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_find_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginBottom="30dp"
+            android:id="@+id/tv_note"
+            android:gravity="center"
+            android:text="你可以在此看到附近的人，同时你也会被他们看到。\n 快去看看附近有哪些人吧！"
+            android:layout_below="@id/iv_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_below="@id/tv_note"
+            android:layout_centerInParent="true"
+            android:text="开始查看"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_circlebutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

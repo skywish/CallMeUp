@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="toolbar_color">#009688</color>
+    <color name="lightgrey">#D3D3D3</color>  <!--亮灰色 -->
+    <color name="lightblue">#77d3b4</color>
+    <color name="lightgreen">#45C01A</color>
+    <color name="primaryfontcolor">#444444</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="color_bottom_text_normal">#9da0a4</color>
+
+    <!-- 聊天界面 -->
+    <color name="chat_background_color">#F2F2F2</color>
+    <color name="chat_send_color">#5E84E5</color>
+    <color name="chat_time_bg">#D4D4D4</color>
+    <color name="chat_time_font">#616161</color>
+
+    <!-- userinfo-->
+    <color name="button_grey">#F1F1F1</color>
+    <color name="button_grey_font">#656565</color>
+
+    <!-- edit activity-->
+    <color name="bg_edit">#F9F9F9</color>
+
+    <!-- imagebrower-->
+    <color name="image_background">#191919</color>
+
+    <!-- recent friend subtitle-->
+    <color name="recent_subtitle">#808080</color>
+
+    <!-- MainActivity-->
+    <color name="bottom_font_color">#9a9a9a</color>
+    <color name="bottom_divide_line">#E2E2E2</color>
+    <!-- 0 184 212-->
+    <color name="bottom_press">#00B8D4</color>
+
+    <!-- 绑定-->
+    <color name="bind_done">#008000</color>
+</resources>

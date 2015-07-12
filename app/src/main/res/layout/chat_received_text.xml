@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:visibility="gone"
+        android:textSize="@dimen/tv_time_textsize"
+        android:textColor="@color/chat_time_font"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/tv_time_height" />
+
+    <RelativeLayout
+        android:layout_below="@id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/head_imageView"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/dev_head_photo" />
+
+        <TextView
+            android:id="@+id/reply_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/head_imageView"
+            android:background="@drawable/left_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="25dp"
+            android:paddingRight="18dp"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

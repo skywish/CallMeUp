@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_color" />
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_search"
+                android:src="@drawable/ic_searchfriend"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <!--android:background="@null"-->
+            <EditText
+                android:id="@+id/et_search"
+                android:paddingLeft="10dp"
+                android:layout_centerVertical="true"
+                android:hint="用户名"
+                android:background="@null"
+                android:textSize="18sp"
+                android:lines="1"
+                android:layout_toRightOf="@+id/iv_search"
+                android:layout_toLeftOf="@+id/layout_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/layout_search"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+                <ImageButton
+                    android:id="@+id/ib_search"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingRight="50dp"
+                    android:background="@drawable/ic_search"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/greyline_heavy"
+            style="@style/greyLine"/>
+
+        <RelativeLayout
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_weibo"
+                android:src="@drawable/picture3"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:text="新浪微博"
+                android:textSize="18sp"
+                android:paddingLeft="10dp"
+                android:layout_toRightOf="@id/iv_weibo"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/greyline_thin"
+            style="@style/greyLine"/>
+
+        <RelativeLayout
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_tencent_weibo"
+                android:src="@drawable/picture2"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:text="腾讯微博"
+                android:textSize="18sp"
+                android:paddingLeft="10dp"
+                android:layout_toRightOf="@id/iv_tencent_weibo"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/greyline_thin"
+            style="@style/greyLine"/>
+
+        <RelativeLayout
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_addresses"
+                android:src="@drawable/picture4"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:text="QQ"
+                android:textSize="18sp"
+                android:paddingLeft="10dp"
+                android:layout_toRightOf="@id/iv_addresses"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/greyline_thin"
+            style="@style/greyLine"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
